@@ -564,4 +564,5 @@ See (CONTRIBUTING.md) for guidelines.
 
 ---
 
-© 2025 Don Michael Feeney Jr. All Rights Reserved.
+© 2025 Don Michael Feeney Jr. 
+License: MIT
