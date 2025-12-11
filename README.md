@@ -3,9 +3,9 @@
 
 **The Algorithmic Safety System That Transforms Risk into Reliability**
 
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
-[![Language: C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://isocpp.org/)
-[![Status: Production Ready](https://img.shields.io/badge/Status-Production%20Ready-green.svg)]()
+[![License: MIT]
+[![Language: C++]
+[![Status: Production Ready]
 
 ---
 
