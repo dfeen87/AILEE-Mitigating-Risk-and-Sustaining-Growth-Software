@@ -3,9 +3,9 @@
 
 **The Algorithmic Safety System That Transforms Risk into Reliability**
 
-[![License: MIT]
-[![Language: C++]
-[![Status: Production Ready]
+License: MIT
+Language: C++
+Status: Production Ready
 
 ---
 
