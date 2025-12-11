@@ -2,7 +2,7 @@
  * AILLE Framework - AI-Load Integrity and Layered Evaluation
  * Production-Grade Algorithmic Trading Safety System
  * 
- * PROPRIETARY - For MIT Licensed Use Only
+ * MIT Licensed Use Only
  * Copyright (c) 2025 Don Michael Feeney Jr
  * 
  * Five-Stage Decision Architecture:
@@ -387,6 +387,6 @@ public:
  * - Thread-safe: Can be used in parallel processing
  * 
  * LICENSE:
- * This code is provided for evaluation and licensed deployment.
- * Contact: dfeen87@gmail.com for commercial licensing terms.
+ * This code is provided for evaluation and open for deployment in MIT License.
+ * Contact: dfeen87@gmail.com for support.
  */
