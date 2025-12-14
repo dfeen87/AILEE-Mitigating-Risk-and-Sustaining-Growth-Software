@@ -14,7 +14,7 @@
  * std::vector<AILLE::ModelSignal> signals = get_your_model_predictions();
  * AILLE::Decision decision = engine.makeDecision(signals);
  * 
- * That's it. No linking, no dependencies, no bullshit.
+ * No linking, no dependencies, no unnecessary complexity.
  */
 
 #ifndef AILLE_HPP
