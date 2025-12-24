@@ -63,9 +63,21 @@ private:
     // Simple hash function (in production, use OpenSSL SHA-256)
     std::string computeHash(const AuditRecord& record) const {
         std::stringstream ss;
-        ss << record.timestamp_ns << record.decision_id << record.final_value
-           << record.confidence << record.models_agreed << record.reasoning
+        ss << record.timestamp_ns
+           << record.decision_id
+           << static_cast<int>(record.status)
+           << record.final_value
+           << record.confidence
+           << record.models_agreed
+           << record.fallback_used
+           << record.reasoning
+           << record.symbol
+           << record.strategy_id
+           << record.user_id
            << record.prev_hash;
+        for (int model_id : record.contributing_models) {
+            ss << model_id;
+        }
         
         // Simplified hash (real implementation should use SHA-256)
         std::hash<std::string> hasher;
@@ -188,16 +200,19 @@ public:
     // Verify audit trail integrity
     bool verifyIntegrity() const {
         if (audit_trail.empty()) return true;
-        
-        std::string expected_hash = "0000000000000000";
-        
+
+        std::string expected_prev_hash = "0000000000000000";
+
         for (const auto& record : audit_trail) {
-            if (record.prev_hash != expected_hash) {
+            if (record.prev_hash != expected_prev_hash) {
                 return false; // Chain broken
             }
-            expected_hash = record.hash;
+            if (record.hash != computeHash(record)) {
+                return false; // Record tampered
+            }
+            expected_prev_hash = record.hash;
         }
-        
+
         return true;
     }
     
